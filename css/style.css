@@ -1,0 +1,211 @@
+
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Archivo', sans-serif;
+    
+}
+
+hr {
+    width: 70%;
+    color: slategrey;
+    margin-top: 2em;
+}
+
+/* HOME PARALLAX FEATURE IMAGE */
+
+.img1 {
+    background-image: url("../image/heroimg.jpeg");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* IMAGE GALLERY */
+
+.container {
+   
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    align-items: stretch;
+}
+
+.gallery {
+    object-fit: cover;
+    /* margin: 20%; */
+    height: 100%;
+    width: 100%;
+}
+
+.gallery, img {
+}
+
+/* WHITESPACE FOR BUFFER */
+
+.whitespace {
+    margin-top: 5em;
+}
+
+/* NAVIGATION  */
+
+.nav {
+    display: flex;
+    flex-grow: inherit;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    background-color: transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    align-items: center;
+    margin-top: 1.2em;
+}
+
+.nav1{
+    flex: 9;
+    width: 25%;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    width: 40%;
+    height: 20%;
+}
+
+.logodiv {
+    flex: 11;
+}
+
+.nav2 {
+    flex: 4;
+    width: 25%;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav ul li {
+    display: inline;
+    padding: 1em;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+/* BLOCK ONE AND FEATURE INFO */
+
+.block1 div {
+    margin: auto;
+}
+
+.feature {
+    text-align: center;
+    color: rgb(82, 79, 74);
+    
+}
+
+.feature a {
+    color: rgb(82, 79, 74);
+}
+
+p .exhibition a {
+    color: peru;
+}
+
+/* first IMAGE BLOCK */
+
+.imgblock {
+    background-image: url("../image/h1.jpg");
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 75%;
+    width: 56%;
+    background-size: contain;
+    background-repeat: no-repeat;
+} 
+
+/* second image block */
+.img3 {
+    background-image: url("../image/Jblock.JPG");
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 75%;
+    width: 56%;
+    background-size: contain;
+    background-repeat: no-repeat;
+} 
+
+/* SCROLLING IMAGE BLOCK */
+
+.img2 {
+    background-image: url("../image/gallerybanner.JPG");
+    height: 60%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* IMAGE FADE IN */
+
+.fadeIn {
+    -webkit-animation: animat_show 0.8s;
+    animation: animat_show 0.8s;
+    visibility: visible !important;
+}
+
+@-webkit-keyframes animat_show{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+
+/* ONLINE SHOP BLOCK 2 */
+
+.block2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    color: rgb(82, 79, 74);
+}
+
+.footer {
+    display: flex;
+    color: black;
+    background-color: white;
+    height: 20%;
+    margin-bottom: 0rem;
+}
+
+.footercontent {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+/* social media */
+
