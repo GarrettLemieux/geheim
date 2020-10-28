@@ -42,6 +42,7 @@ hr {
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 15px;
     align-items: stretch;
+    will-change: transform;
 }
 
 .gallery {
