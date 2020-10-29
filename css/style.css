@@ -216,11 +216,44 @@ p .exhibition a {
     text-align: center;
 }
 
+.onlineshop {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
 /* social media */
 
+/* Contact Page Styles */
+
+.contactinfo {
+    
+}
 
 /* Media Queries */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    
-}
+/* @media (min-device-width: 320px) {
+    .img1{
+        height: 100%;
+        background-size: cover;
+        
+    }
+
+    .nav {
+        
+    }
+
+    .nav1 {
+        visibility: hidden;
+    }
+
+    .nav2 {
+        visibility: hidden;
+    }
+
+    .logo {
+        height: 4em;
+        width: 5em;
+        
+    }
+} */
