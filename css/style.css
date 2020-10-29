@@ -87,6 +87,14 @@ hr {
 .logo {
     width: 40%;
     height: 20%;
+    -webkit-transform: scale(1);
+    transition-duration: 1s;
+}
+.logo:hover {
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transform: scale(1.1);
+    transition-duration: 1s;
 }
 
 .logodiv {
@@ -210,3 +218,9 @@ p .exhibition a {
 
 /* social media */
 
+
+/* Media Queries */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    
+}
