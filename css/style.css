@@ -186,11 +186,6 @@ p .exhibition a {
     visibility: visible !important;
 }
 
-@-webkit-keyframes animat_show{
-    0%{opacity:0}
-    100%{opacity:1}
-}
-
 /* ONLINE SHOP BLOCK 2 */
 
 .block2 {
