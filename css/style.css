@@ -52,9 +52,6 @@ hr {
     width: 100%;
 }
 
-.gallery, img {
-}
-
 /* WHITESPACE FOR BUFFER */
 
 .whitespace {
@@ -121,7 +118,6 @@ ul li a {
 }
 
 .nav-ul {
-    visibility: ;
     width: 0%;
     height: 0%;
 }
@@ -242,21 +238,7 @@ p .exhibition a {
 
 @media only screen and (max-device-width: 667px) 
  {
-    /* .hamburger {
-        display: block;
-        visibility: visible;
-        position: absolute;
-        z-index: 1000;
-        top: 20px;
-        right: 20px;
-        width: 36px;
-        height: 36px;
-        border: none;
-        cursor: pointer;
-        background-color: transparent;
-        background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
-        background-size: 100%;
-      } */
+   
     .nav-ul li a {
         visibility: visible !important;
         color: whitesmoke;
