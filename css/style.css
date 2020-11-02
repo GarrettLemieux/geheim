@@ -187,14 +187,6 @@ p .exhibition a {
     background-attachment: fixed;
 }
 
-/* IMAGE FADE IN */
-
-.fadeIn {
-    -webkit-animation: animat_show 0.8s;
-    animation: animat_show 0.8s;
-    visibility: visible !important;
-}
-
 /* ONLINE SHOP BLOCK 2 */
 
 .block2 {
