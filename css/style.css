@@ -84,7 +84,7 @@ hr {
 .logo {
     width: 40%;
     height: 20%;
-    -webkit-transform: scale(1);
+    transform: scale(1);
     transition-duration: 1s;
 }
 .logo:hover {
@@ -230,9 +230,6 @@ p .exhibition a {
 
 /* Contact Page Styles */
 
-.contactinfo {
-    
-}
 
 /* Media Queries */
 
@@ -310,7 +307,5 @@ p .exhibition a {
         width: 10em;
     }
 
-    .logodiv {
-        
-    }
+    
 }
