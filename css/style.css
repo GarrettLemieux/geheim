@@ -225,7 +225,7 @@ ul li a {
 
 /* Media Queries */
 
-@media only screen and (max-device-width: 1024px) 
+@media only screen (max-device-width: 1024px) 
  {
    
     .nav-ul li a {
