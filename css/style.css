@@ -225,7 +225,8 @@ ul li a {
 
 /* Media Queries */
 
-@media only screen and (max-device-width: 1024px) 
+@media only screen and (min-device-width: 320px)
+and (max-device-width: 1024px) 
  {
    
     .nav-ul li a {
@@ -299,5 +300,8 @@ ul li a {
         width: 10em;
     }
 
+    .logodiv {
+        
+    }
     
 }
