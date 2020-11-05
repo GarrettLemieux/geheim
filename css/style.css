@@ -309,7 +309,7 @@ and (max-width: 1024px)
 
 /* iphone */
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) { 
+@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation : portrait) { 
     .nav-ul li a {
         visibility: visible !important;
         color: whitesmoke;
