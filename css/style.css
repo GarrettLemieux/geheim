@@ -69,13 +69,14 @@ nav {
 
 @media screen and (max-width:768px){
     .wrapper {
-        overflow-x: hidden;
+        overflow-x: hidden !important;
+        
     }
     html, body {
-        overflow-x: hidden;
+        overflow-x: hidden !important;
     }
     .navlinks{
-        position: fixed;
+        position: absolute;
         right: 0%;
         height: 92vh;
         top: 8vh;
