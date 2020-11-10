@@ -1,209 +1,205 @@
-
-
-
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: 'Archivo', sans-serif;
-    background-color: rgb(231, 228, 223);
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-hr {
-    width: 70%;
-    color: slategrey;
-    margin-top: 2em;
+body {
+    background-color: rgb(245, 238, 233);
 }
 
-/* HOME PARALLAX FEATURE IMAGE */
-
-.img1 {
-    background-image: url("/image/heroimg.jpeg");
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: 100vw auto;
-    position: relative;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/* IMAGE GALLERY */
-
-.container {
-   
-    margin-left: 10%;
-    margin-right: 10%;
-    
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 15px;
-    align-items: stretch;
-    will-change: transform;
-}
-
-.gallery {
-    object-fit: cover;
-    /* margin: 20%; */
-    height: 100%;
-    width: 100%;
-}
-
-/* WHITESPACE FOR BUFFER */
-
-.whitespace {
-    margin-top: 5em;
-}
-
-/* NAVIGATION  */
-
-.nav {
+nav {
     display: flex;
-    flex-grow: inherit;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: relative;
-    background-color: transparent;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 1.2em;
-}
-
-.nav1{
-    flex: 6;
-    width: 25%;
-    display: inline;
-    margin-left: auto;
-    margin-right: auto;
+    min-height: 8vh;
+    background-color: rgb(245, 238, 233);
 }
 
 .logo {
-    width: 40%;
-    height: 20%;
-    transform: scale(1);
-    transition-duration: 1s;
-}
-.logo:hover {
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    transform: scale(1.1);
-    transition-duration: 1s;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: red;
 }
 
-.logodiv {
-    flex: 11;
+.navlinks {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
 }
 
-.nav2 {
-    flex: 4;
-    width: 25%;
-    display: inline;
-    margin-left: auto;
-    margin-right: auto;
+.navlinks li {
+    list-style: none;
 }
 
-.nav ul li {
-    display: inline;
-    padding: 1em;
-}
-
-ul li a {
+.navlinks a {
+    color: black;
     text-decoration: none;
-    color: white;
-    font-size: 1.2em;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 15px;
 }
 
-.nav-ul {
-    width: 0%;
-    height: 0%;
+.burger {
+    display: none;
+    cursor: pointer;
 }
 
-.hamburger {
-    visibility: hidden;
-    width: 0%;
-    height: 0%;
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.3s ease;
 }
 
 
-/* BLOCK ONE AND FEATURE INFO */
+/* Media Queries */
 
-.block1 div {
-    margin: auto;
-}
-
-.feature {
-    text-align: center;
-    color: rgb(82, 79, 74);
+@media screen and (max-width: 1250px) {
+    .navlinks {
+        width: 60%;
+    }
     
 }
 
-.feature a {
-    color: rgb(82, 79, 74);
+
+@media screen and (max-width:768px){
+    body {
+        overflow-x: hidden;
+    }
+    .navlinks{
+        position: absolute;
+        right: 0%;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgb(245, 238, 233);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .navlinks li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+
+    body .parallax-1 {
+        background-image: url("/images/gallerymobile.png");
+        background-attachment: fixed;
+        background-size: 100%;
+        height: 50vh;
+    }
+    body .parallax-2 {
+       display: none;;
+     }
+
+     .mobilehr {
+         display: none;
+     }
 }
 
-.exhibition a {
-    color: peru;
+.nav-active {
+    transform: translateX(0%);
 }
 
-/* first IMAGE BLOCK */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
 
-.imgblock {
-    background-image: url("/image/hannah1.jpg");
-    display: block;
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    
+    transform: rotate(-45deg) translate(-5px, 6px);
+
+}
+
+.toggle .line2 {
+    
+    opacity: 0;
+
+}
+
+.toggle .line3 {
+    
+    transform: rotate(45deg) translate(-5px, -6px);
+
+}
+
+/* horizontal line */
+
+hr {
     margin-left: auto;
     margin-right: auto;
-    height: 75%;
-    width: 56%;
-    background-size: contain;
-    background-repeat: no-repeat;
-} 
+    width: 70%;
+    color: black;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+/* Parallax */
 
-/* second image block */
-.img3 {
-    background-image: url("../image/Jblock.JPG");
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 75%;
-    width: 56%;
-    background-size: contain;
-    background-repeat: no-repeat;
-} 
-
-/* SCROLLING IMAGE BLOCK */
-
-.img2 {
-    background-image: url("../image/gallerybanner.JPG");
-    height: 60%;
-    width: 100%;
+.parallax-1 {
+    background-image: url("/images/fullpage.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+    background-position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    background-position: center;
-    background-attachment: fixed;
 }
 
-/* ONLINE SHOP BLOCK 2 */
+/* home info */
 
-.block2 {
+.home-info {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     text-align: center;
-    color: rgb(82, 79, 74);
+    justify-content: space-evenly;
 }
+
+.home-info p, h2, h3, a {
+    margin-top: 2em;
+}
+
+
+/* second parallax image */
+
+.parallax-2 {
+    background-image: url("/images/gallerybanner.jpg");
+    height: 65vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+}
+
+/* footer */
 
 .footer {
     display: flex;
     color: black;
-    background-color: rgb(231, 228, 223);
+    background-color: rgb(245, 238, 233);
     height: 20%;
-    margin-bottom: 0rem;
+    margin-bottom: 5em;
 }
 
 .footercontent {
@@ -212,176 +208,7 @@ ul li a {
     text-align: center;
 }
 
-.onlineshop {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-}
-/* social media */
-
-/* Contact Page Styles */
-
-
-/* Media Queries */
-
-@media (min-width: 320px)
-and (max-width: 1024px) 
- {
-   
-    .nav-ul li a {
-        visibility: visible !important;
-        color: whitesmoke;
-    }
-    .hamburger {
-        display: block;
-        visibility: visible;
-        position: absolute;
-        z-index: 1000;
-        top: 20px;
-        right: 20px;
-        width: 36px;
-        height: 96px;
-        border: none;
-        cursor: pointer;
-        background-color: transparent;
-        background-size: 100%;
-        margin-right: 1em;
-    }
-
-    .hamburger:focus {
-        outline: none;
-    }
-
-    .hamburger i {
-        font-size: 2.8em;
-        
-    }
-
-    .nav-ul {
-        display: none;
-        height: 40.2em;
-        width: 100vh;
-        flex-direction: column;
-        margin-top: -1px;
-        
-    }
-
-    .nav-ul.show {
-        display: flex;
-        background-color: rgb(58, 56, 56);
-        -webkit-transition: background-color 2s linear;
-        -ms-transition: background-color 2s linear;
-        transition: background-color 2s linear;
-        background-size: 100vh;
-        text-align: center;
-    }
-
-    .nav-ul a {
-        margin-right: 3.5em;
-    }
-
-
-
-
-
-
-
-
-
-
-    .nav1 {
-        visibility: hidden;
-        margin-left: -8em;
-        
-    }
-    .logo {
-        height: 7em;
-        width: 10em;
-    }
-
-    .logodiv {
-        
-    }
-    
+.footercontent a, p {
+    margin-top: 2em;
 }
 
-
-/* iphone */
-
-@media (min-width: 375px) and (max-width: 667px) and (orientation : portrait) { 
-    .nav-ul li a {
-        visibility: visible !important;
-        color: whitesmoke;
-    }
-    .hamburger {
-        display: block;
-        visibility: visible;
-        position: absolute;
-        z-index: 1000;
-        top: 20px;
-        right: 20px;
-        width: 36px;
-        height: 96px;
-        border: none;
-        cursor: pointer;
-        background-color: transparent;
-        background-size: 100%;
-        margin-right: 1em;
-    }
-
-    .hamburger:focus {
-        outline: none;
-    }
-
-    .hamburger i {
-        font-size: 2.8em;
-        
-    }
-
-    .nav-ul {
-        display: none;
-        height: 40.2em;
-        width: 100vh;
-        flex-direction: column;
-        margin-top: -1px;
-        
-    }
-
-    .nav-ul.show {
-        display: flex;
-        background-color: rgb(58, 56, 56);
-        -webkit-transition: background-color 2s linear;
-        -ms-transition: background-color 2s linear;
-        transition: background-color 2s linear;
-        background-size: 100vh;
-        text-align: center;
-    }
-
-    .nav-ul a {
-        margin-right: 3.5em;
-    }
-
-
-
-
-
-
-
-
-
-
-    .nav1 {
-        visibility: hidden;
-        margin-left: -8em;
-        
-    }
-    .logo {
-        height: 7em;
-        width: 10em;
-    }
-
-    .logodiv {
-        
-    }
-}
