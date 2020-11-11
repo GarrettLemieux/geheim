@@ -5,6 +5,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+#PopupSignupForm_0 {
+    z-index: 99999;
+    position: relative;
+}
+
 body {
     background-color: rgb(245, 238, 233);
 }
